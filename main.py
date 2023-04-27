@@ -54,7 +54,7 @@ def extract_today_event_times(html, db):
                     event_time = td.text
                     if currency_with_only_3_letters:
                         print(currency_with_only_3_letters, amount_starts, event_time)
-                        db.execute(text("insert into public.news (pair, stars, times) values (:pair, :stars, :times)"),
+                        db.execute(text("insert into public.news (pair, stars, hours) values (:pair, :stars, :hours)"),
                                       {'pair': currency_with_only_3_letters, 'stars': amount_starts, 'times': event_time})
                         db.commit()
                         db.close()
