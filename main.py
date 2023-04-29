@@ -221,9 +221,9 @@ def get_html_from_economic_calendar():
     browser = webdriver.Chrome(service=chrome_service, options=chrome_options)
     url = 'https://br.investing.com/economic-calendar/'
     browser.get(url)
-    btn = browser.find_element(By.XPATH, '//*[@id="timeFrame_yesterday"]')
-    btn.click()
-    time.sleep(2)
+    # btn = browser.find_element(By.XPATH, '//*[@id="timeFrame_yesterday"]')
+    # btn.click()
+    # time.sleep(2)
     html = browser.page_source
     return html
 
